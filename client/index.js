@@ -10,7 +10,9 @@ import SongDetail from './components/SongDetail';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 const client = new ApolloClient({
-
+  dataIdFromObject: o =>{
+    return o.id
+  }
 });
 
 const Root = () => {

@@ -23,7 +23,7 @@ class CreateLyrics extends Component {
             <div>
                 <form onSubmit={e=>this.onFormSubmit(e)}>
                     <label>Add Lyrics</label>
-                    <input onChange={e=>this.setState({content: e.target.value})}></input>
+                    <input value={this.state.content} onChange={e=>this.setState({content: e.target.value})}></input>
                 </form>
             </div>
         );
@@ -36,7 +36,8 @@ mutation addLyricToSong($content: String, $songId: ID){
       id,
       lyrics{
         id,
-        content
+        content,
+        likes
       }
     }
   }`

@@ -5,3 +5,10 @@
 .material-icons {
     cursor: pointer;
 }
+.vote-box .material-icons{
+    margin-right: 5px;
+}
+.vote-box {
+    display: flex;
+    align-items: center;
+}
